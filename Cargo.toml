@@ -1,0 +1,28 @@
+[package]
+name = "soul-sever"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Terminal Soulseek client"
+publish = false
+
+[dependencies]
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+cpal = "0.15.3"
+flate2 = { version = "1.1.10", default-features = false, features = ["rust_backend"] }
+if-addrs = "0.14"
+keyring = { version = "4.2", default-features = false, features = ["v1"] }
+lofty = { version = "0.24.0", default-features = false }
+symphonia = { version = "0.5.4", default-features = false, features = ["aac", "alac", "flac", "isomp4", "mp3", "pcm", "vorbis", "wav"] }
+md-5 = { version = "0.11", default-features = false, features = ["alloc"] }
+ratatui = { version = "0.30.2", features = ["crossterm_0_29"] }
+serde = { version = "1.0.229", features = ["derive"] }
+thiserror = "2"
+tokio = { version = "1.53.1", default-features = false, features = ["macros", "rt-multi-thread", "net", "io-util", "fs", "sync", "time"] }
+toml = "1.1.6"
+
+[dev-dependencies]
+tokio = { version = "1.53.1", features = ["test-util"] }
+
+[lints.rust]
+unsafe_code = "forbid"
